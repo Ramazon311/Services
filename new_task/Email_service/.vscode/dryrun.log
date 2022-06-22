@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ramazon/projects/go/src/github.com/Services/new_task/Email_service'
+ 
+CGO_ENABLED=0 GOOS=linux go build -mod=vendor -a -installsuffix cgo -o /home/ramazon/projects/go/src/github.com/Services/new_task/Email_service/bin/ /main.go
+make: Leaving directory '/home/ramazon/projects/go/src/github.com/Services/new_task/Email_service'
+ 

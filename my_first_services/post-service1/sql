@@ -1,0 +1,3 @@
+CREATE DATABASE postdb;
+CREATE TABLE posts (id uuid, name varchar(30), description varchar(30), user_id uuid,primary key(id));
+CREATE TABLE post_medias (id uuid, type varchar(30), link varchar(30), post_id uuid,foreign key(post_id) references posts(id)); 
