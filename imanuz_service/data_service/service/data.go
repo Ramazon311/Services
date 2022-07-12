@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"time"
 
-	pb "github/Services/post_task/data_service/genproto/data_service"
+	pb "github.com/Services/imanuz_service/data_service/genproto/data_service"
 
-	l "github/Services/post_task/data_service/pkg/logger"
-	"github/Services/post_task/data_service/storage"
+	l "github.com/Services/imanuz_service/data_service/pkg/logger"
+	"github.com/Services/imanuz_service/data_service/storage"
 
 	"github.com/jmoiron/sqlx"
 )

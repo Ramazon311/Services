@@ -1,7 +1,7 @@
 package repo
 
 import (
-	pb "github/Services/post_task/data_service/genproto/data_service"
+	pb "github.com/Services/imanuz_service/data_service/genproto/data_service"
 )
 
 //PostStorageI ...
@@ -9,5 +9,3 @@ import (
 type DataStorageI interface {
 	Create(*pb.Post) (*pb.EmptyResp, error)
 }
-
-

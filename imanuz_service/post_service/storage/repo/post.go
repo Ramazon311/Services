@@ -1,7 +1,7 @@
 package repo
 
 import (
-	pb "github/Services/post_task/post_service/genproto/post_service"
+	pb "github.com/Services/imanuz_service/post_service/genproto/post_service"
 )
 
 //PostStorageI ...
@@ -12,5 +12,3 @@ type PostStorageI interface {
 	Update(*pb.UpdatePost) (*pb.Post, error)
 	Delete(string) (*pb.EmptyResp, error)
 }
-
-

@@ -1,8 +1,9 @@
 package postgres
 
 import (
-	pb "github/Services/post_task/data_service/genproto/data_service"
 	"time"
+
+	pb "github.com/Services/imanuz_service/data_service/genproto/data_service"
 
 	"github.com/jmoiron/sqlx"
 )

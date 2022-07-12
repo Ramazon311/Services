@@ -3,10 +3,10 @@ package service
 import (
 	"context"
 
-	pb "github/Services/post_task/post_service/genproto/post_service"
+	pb "github.com/Services/imanuz_service/post_service/genproto/post_service"
 
-	l "github/Services/post_task/post_service/pkg/logger"
-	"github/Services/post_task/post_service/storage"
+	l "github.com/Services/imanuz_service/post_service/pkg/logger"
+	"github.com/Services/imanuz_service/post_service/storage"
 
 	"github.com/jmoiron/sqlx"
 )

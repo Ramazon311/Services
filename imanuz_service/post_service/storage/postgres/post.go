@@ -3,8 +3,9 @@ package postgres
 import (
 	"database/sql"
 	"fmt"
-	pb "github/Services/post_task/post_service/genproto/post_service"
 	"time"
+
+	pb "github.com/Services/imanuz_service/post_service/genproto/post_service"
 
 	"github.com/jmoiron/sqlx"
 )

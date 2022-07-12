@@ -1,14 +1,14 @@
-module github/Services/post_task/post_service
+module github.com/Services/imanuz_service/post_service
 
 go 1.17
 
 require (
 	github.com/golang/protobuf v1.5.2
 	github.com/jmoiron/sqlx v1.3.5
-	github.com/lib/pq v1.10.5
-	github.com/spf13/cast v1.4.1
+	github.com/lib/pq v1.10.6
+	github.com/spf13/cast v1.5.0
 	go.uber.org/zap v1.21.0
-	google.golang.org/grpc v1.46.0
+	google.golang.org/grpc v1.47.0
 )
 
 require (

@@ -8,7 +8,7 @@ proto-gen:
 	ls genproto/*.pb.go | xargs -n1 -IX bash -c "sed -e '/bool/ s/,omitempty//' X > X.tmp && mv X{.tmp,}"
 	
 do-version:
-	migrate -source file:./migrations/ -database 'postgres://coder:123@localhost:5432/postgres?sslmode=disable' up 
+	migrate -source file:./migrations/ -database 'postgres://imandb:ramazon_1@localhost:5432/postgres?sslmode=disable' up 
 
 create:
 	migrate create -ext sql -dir migrations -seq create_post_table

@@ -2,7 +2,8 @@ package db
 
 import (
 	"fmt"
-	"github/Services/post_task/data_service/config"
+
+	"github.com/Services/imanuz_service/data_service/config"
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"

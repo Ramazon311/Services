@@ -1,13 +1,13 @@
 package main
 
 import (
-	"github/Services/post_task/data_service/config"
-	pb "github/Services/post_task/data_service/genproto/data_service"
-	"github/Services/post_task/data_service/pkg/db"
-	"github/Services/post_task/data_service/pkg/logger"
-	"github/Services/post_task/data_service/service"
 	"net"
 
+	"github.com/Services/imanuz_service/data_service/config"
+	pb "github.com/Services/imanuz_service/data_service/genproto/data_service"
+	"github.com/Services/imanuz_service/data_service/pkg/db"
+	"github.com/Services/imanuz_service/data_service/pkg/logger"
+	"github.com/Services/imanuz_service/data_service/service"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
