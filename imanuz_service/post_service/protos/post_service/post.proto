@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+
+package post;
+
+service PostService {
+  rpc Get(IdP) returns (Post){}
+  rpc List(ListReq) returns (ListRes){}
+  rpc Update(UpdatePost) returns (Post){}
+  rpc Delete(IdP) returns (EmptyResp){}
+}
+
+message EmptyResp {}
+
+message Post {
+    string id = 1;
+    string user_id = 2;
+    string title = 3;
+    string body = 4;
+    string created_at = 5;
+    string updated_at = 6;
+    string deleted_at = 7;
+}
+message IdP {
+    string id = 1;
+}
+message ListReq {
+    int64 page = 1;
+    int64 limit = 2;
+}
+message ListRes {
+    repeated Post posts = 1;
+    int64 count = 2;
+}
+message UpdatePost {
+    string id = 1;
+    string title = 2;
+    string body = 3;
+}

@@ -1,0 +1,2 @@
+CREATE DATABASE userdb;
+CREATE TABLE users1 (id uuid, first_name varchar(30), last_name varchar(30)) 

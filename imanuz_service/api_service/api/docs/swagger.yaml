@@ -1,0 +1,161 @@
+basePath: /v1
+definitions:
+  models.CreatedPost:
+    properties:
+      link:
+        type: string
+    type: object
+  models.List:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+    type: object
+  models.ListRes:
+    properties:
+      count:
+        type: integer
+      posts:
+        $ref: '#/definitions/models.Post'
+    type: object
+  models.Post:
+    properties:
+      body:
+        type: string
+      created_at:
+        type: string
+      deleted_at:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: string
+    type: object
+  models.UpdatePost:
+    properties:
+      body:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+      user_id:
+        type: string
+    type: object
+info:
+  contact: {}
+  title: Post api
+paths:
+  /post/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete post
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Delete post
+      tags:
+      - Post
+    get:
+      consumes:
+      - application/json
+      description: Get post
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Post'
+      summary: Get post
+      tags:
+      - Post
+    put:
+      consumes:
+      - application/json
+      description: Update post
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdatePost'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Post'
+      summary: Update post
+      tags:
+      - Post
+  /posts:
+    post:
+      consumes:
+      - application/json
+      description: This API for creating a new post
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreatedPost'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Create new post
+      tags:
+      - Post
+  /posts/:
+    put:
+      consumes:
+      - application/json
+      description: Get posts
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.List'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ListRes'
+      summary: Get posts
+      tags:
+      - Post
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

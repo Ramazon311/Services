@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ramazon/projects/go/src/github.com/Gorilla-services'
+make: Leaving directory '/home/ramazon/projects/go/src/github.com/Gorilla-services'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

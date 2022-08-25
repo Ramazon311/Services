@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ramazon/projects/go/src/github.com/Gorilla-services/user-service1'
+ 
+CGO_ENABLED=0 GOOS=darwin go build -mod=vendor -a -installsuffix cgo -o /home/ramazon/projects/go/src/github.com/Gorilla-services/user-service1/bin/template ./cmd/main.go
+make: Leaving directory '/home/ramazon/projects/go/src/github.com/Gorilla-services/user-service1'
+ 
